@@ -11,18 +11,18 @@ const app = express();  //to inicialize express aplication
 //Configure cors
 app.use(cors()); //use is a middleware
 
+// Lectura y parseo del body
+app.use(express.json()); 
+
 //Database connection
 dbConnection();
 
 console.log( process.env );
 
 //Rutas
-app.get( '/', (req,res) => {
-    res.json({
-        ok: true,
-        msg: 'Hola Mundo'
-    });
-});
+app.use( '/api/usuarios', require('./routes/usuarios') );
+app.use( '/api/login', require('./routes/auth') );
+
 
 //To run the aplication
 app.listen(process.env.PORT,() =>{
