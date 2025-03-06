@@ -11,6 +11,9 @@ const app = express();  //to inicialize express aplication
 //Configure cors
 app.use(cors()); //use is a middleware
 
+// Carpeta pública
+ app.use( express.static('public'));  //To serve static files from the public folder
+
 // Lectura y parseo del body
 app.use(express.json()); 
 
