@@ -32,13 +32,15 @@ router.post('/',
     crearInmueble);
 
 router.put( '/:id',
-
     [
-
+        validarJWT,
+        check('nombre', 'El nombre del inmueble es necesario').not().isEmpty(),
+        validarCampos, 
     ],
     actualizarInmueble);
 
 router.delete('/:id',
+    validarJWT,
     borrarInmueble
 );
 

@@ -16,7 +16,7 @@ app.use(cors()); //use is a middleware
 
 // Lectura y parseo del body
 app.use(express.json()); 
-
+ 
 //Database connection
 dbConnection();
 
