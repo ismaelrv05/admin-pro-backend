@@ -1,0 +1,45 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+
+  .error-card {
+    max-width: 500px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    .error-code {
+      font-size: 80px;
+      font-weight: bold;
+      color: #dc3545;
+    }
+
+    .error-message {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .error-description {
+      font-size: 16px;
+      color: #6c757d;
+    }
+
+    .btn-primary {
+      font-size: 18px;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      margin-top: 15px;
+
+      &:hover,
+      &:focus {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

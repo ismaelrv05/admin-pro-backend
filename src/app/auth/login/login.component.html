@@ -1,0 +1,31 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2 class="text-center text-primary">Iniciar Sesión</h2>
+
+    <!-- Formulario de inicio de sesión -->
+    <form>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="/recuperar" class="text-muted">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <!-- Enlace a registro -->
+      <div class="text-center mt-3">
+        <p class="text-muted">¿No tienes una cuenta? <a href="/register" class="register-link">Regístrate aquí</a></p>
+      </div>
+    </form>
+  </div>
+</div>
