@@ -3,20 +3,22 @@
     <h2 class="text-center text-primary">Iniciar Sesión</h2>
 
     <!-- Formulario de inicio de sesión -->
-    <form>
+    <form id="loginform" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="login()">
       <div class="mb-3">
         <label for="email" class="form-label">Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" aria-describedby="emailHelp" formControlName = "email">
       </div>
 
       <div class="mb-3">
         <label for="password" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" formControlName = "password" >
       </div>
 
       <div class="d-grid">
         <button type="submit" class="btn btn-primary">Ingresar</button>
       </div>
+
+      <div #googleBtn id="buttonDiv"></div>
 
       <div class="text-center mt-3">
         <a href="/recuperar" class="text-muted">¿Olvidaste tu contraseña?</a>

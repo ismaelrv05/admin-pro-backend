@@ -2,35 +2,46 @@
   <div class="register-card">
     <h2 class="text-center text-primary">Crear Cuenta</h2>
 
-    <!-- Formulario de registro -->
-    <form>
+    <form id="loginform" autocomplete="off" [formGroup]="registerForm" (ngSubmit)="createUser()">
+
       <div class="mb-3">
-        <label for="name" class="form-label">Nombre Completo</label>
-        <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" class="form-control" formControlName="nombre">
+        <div *ngIf="noValidLabel('nombre')" class="text-danger">El nombre es obligatorio</div>
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
+        <input type="email" id="email" class="form-control" formControlName="email">
+        <div *ngIf="noValidLabel('correo')" class="text-danger">Ingrese un correo válido</div>
       </div>
 
       <div class="mb-3">
         <label for="password" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="password" placeholder="Ingresa una contraseña segura" required>
+        <input type="password" id="password" class="form-control" formControlName="password">
+        <div *ngIf="noValidLabel('password')" class="text-danger">
+          La contraseña es obligatoria y debe tener al menos 6 caracteres
+        </div>
       </div>
 
       <div class="mb-3">
         <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-        <input type="password" class="form-control" id="confirmPassword" placeholder="Repite tu contraseña" required>
+        <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+        <div *ngIf="registerForm.hasError('mismatch')" class="text-danger">
+          Las contraseñas no coinciden
+        </div>
       </div>
 
       <div class="d-grid">
-        <button type="submit" class="btn btn-primary">Registrarse</button>
+        <button type="submit" class="btn btn-primary">
+          Registrarse
+        </button>
       </div>
 
       <div class="text-center mt-3">
         <p class="text-muted">¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a></p>
       </div>
+
     </form>
   </div>
 </div>

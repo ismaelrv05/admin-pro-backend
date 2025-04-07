@@ -8,6 +8,7 @@ import { NoFoundPageComponent } from './no-found-page/no-found-page.component';
 
 const routes: Routes = [
 
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: NoFoundPageComponent }
