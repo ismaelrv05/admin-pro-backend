@@ -34,6 +34,7 @@ const login = async (req, res = response) => {
 
         res.json({
             ok: true,
+            usuario: usuarioDB,
             token
         })
 
@@ -69,6 +70,10 @@ const googleSignIn = async (req, res = response) => {
             usuario.google = true;
         }
 
+        if (!usuario.img && picture) {
+            usuario.img = picture;
+          }
+
         //Guardar ususuario
         await usuario.save();
 
@@ -78,7 +83,7 @@ const googleSignIn = async (req, res = response) => {
 
         res.json({
             ok: true,
-            email, name, picture,
+            usuario,
             token
         });
 
@@ -98,9 +103,14 @@ const refreshToken = async (req, res = response) => {
     const uid = req.uid;
 
     const token = await generarJWT(uid);
+
+    // Obtener el usuario por el UID
+    const usuario = await Usuario.findById( uid );
+
     res.json({
         ok: true,
-        token
+        token,
+        usuario
     })
 }
 

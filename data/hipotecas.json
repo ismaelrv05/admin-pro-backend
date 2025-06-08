@@ -1,0 +1,65 @@
+[
+  {
+    "entidad": "Banca March",
+    "tipo": "Fija",
+    "tae": "2.91%",
+    "cuota": 577,
+    "plazo": "30 años",
+    "requisitos": "Cumpliendo requisitos",
+    "comentarios": "Ejemplo representativo basado en préstamo de 150.000€"
+  },
+  {
+    "entidad": "Bankinter",
+    "tipo": "Fija",
+    "tae": "3.03%",
+    "cuota": 515,
+    "plazo": "30 años",
+    "requisitos": "Nómina + Seguro Hogar + Seguro Vida + Cuenta",
+    "comentarios": "Importe máximo: 80% del valor de la vivienda"
+  },
+  {
+    "entidad": "Openbank",
+    "tipo": "Fija",
+    "tae": "3.10%",
+    "cuota": 522,
+    "plazo": "30 años",
+    "requisitos": "Nómina domiciliada + seguro hogar",
+    "comentarios": "Oferta sujeta a perfil de cliente"
+  },
+  {
+    "entidad": "Santander",
+    "tipo": "Fija",
+    "tae": "3.20%",
+    "cuota": 530,
+    "plazo": "30 años",
+    "requisitos": "Nómina + seguro hogar + seguro vida + tarjeta",
+    "comentarios": "Importe máximo del 80% para vivienda habitual"
+  },
+  {
+    "entidad": "BBVA",
+    "tipo": "Fija",
+    "tae": "3.15%",
+    "cuota": 528,
+    "plazo": "30 años",
+    "requisitos": "Domiciliar nómina y contratar seguros",
+    "comentarios": "Financiación máxima del 80% del valor"
+  },
+  {
+    "entidad": "Caja Rural",
+    "tipo": "Fija",
+    "tae": "3.35%",
+    "cuota": 540,
+    "plazo": "30 años",
+    "requisitos": "Condiciones vinculantes",
+    "comentarios": "Condiciones variables según la zona"
+  },
+  {
+    "entidad": "ING",
+    "tipo": "Fija",
+    "tae": "3.05%",
+    "cuota": 525,
+    "plazo": "30 años",
+    "requisitos": "Nómina y seguros básicos",
+    "comentarios": "Oferta sin comisión de apertura"
+  }
+]

@@ -10,16 +10,21 @@ const { validarCampos } = require('../middlewares/validar-campos');
 const { validarJWT } = require('../middlewares/validar-jwt');
 
 
-const { 
+const {
     getInmuebles,
+    getInmuebleById,
     crearInmueble,
     actualizarInmueble,
-    borrarInmueble
+    borrarInmueble,
+    getInmueblesRecientes
 } = require('../controllers/inmuebles');
 
 const router = Router();
 
 router.get('/', getInmuebles);
+router.get('/recientes', getInmueblesRecientes);
+router.get('/:id', getInmuebleById);
+
 
 router.post('/',
 
@@ -31,11 +36,11 @@ router.post('/',
 
     crearInmueble);
 
-router.put( '/:id',
+router.put('/:id',
     [
         validarJWT,
         check('nombre', 'El nombre del inmueble es necesario').not().isEmpty(),
-        validarCampos, 
+        validarCampos,
     ],
     actualizarInmueble);
 

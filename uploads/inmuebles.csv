@@ -1,0 +1,6 @@
+nombre,descripcion,precio,ubicacion,tipo,disponibilidad,obraNueva,metrosCuadrados,habitaciones,banos,garage,amueblado,fechaPublicacion,img
+"Apartamento en el centro,Ubicado en el corazón de la ciudad.,120000.0,""Madrid, España"",Piso,alquiler,False,65,2,1,True,True,2025-01-15T00:00:00Z,https://example.com/img1.jpg"
+"Chalet moderno,Con piscina y amplio jardín.,275000.0,""Barcelona, España"",Chalet,compra,False,210,4,3,True,False,2025-02-20T00:00:00Z,https://example.com/img2.jpg"
+"Estudio acogedor,Ideal para una persona o pareja.,80000.0,""Granada, España"",Estudio,compra,False,35,1,1,False,True,2025-03-10T00:00:00Z,https://example.com/img3.jpg"
+"Ático con terraza,Terraza con vistas al mar.,200000.0,""Valencia, España"",Ático,compra,False,90,3,2,True,True,2025-04-05T00:00:00Z,https://example.com/img4.jpg"
+"Casa rural reformada,Reformada recientemente con estilo rústico.,150000.0,""Zaragoza, España"",Casa Rural,compra,False,120,3,2,False,True,2025-05-01T00:00:00Z,https://example.com/img5.jpg"

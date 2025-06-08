@@ -1,0 +1,6 @@
+nombre,descripcion,precio,ubicacion,tipo,metrosCuadrados,habitaciones,banos,garage,amueblado,fechaPublicacion,img
+"Apartamento en el centro,Ubicado en el corazón de la ciudad.,120000,""Madrid, España"",Piso,65,2,1,true,true,2025-01-15,https://example.com/img1.jpg"
+"Chalet moderno,Con piscina y amplio jardí­n.,275000,""Barcelona, España"",Chalet,210,4,3,true,false,2025-02-20,https://example.com/img2.jpg"
+"Estudio acogedor,Ideal para una persona o pareja.,80000,""Granada, España"",Estudio,35,1,1,false,true,2025-03-10,https://example.com/img3.jpg"
+"Ático con terraza,Terraza con vistas al mar.,200000,""Valencia, España"",Ático,90,3,2,true,true,2025-04-05,https://example.com/img4.jpg"
+"Casa rural reformada,Reformada recientemente con estilo rústico.,150000,""Zaragoza, España"",Casa Rural,120,3,2,false,true,2025-05-01,https://example.com/img5.jpg"

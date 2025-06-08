@@ -5,7 +5,7 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 const { validarCampos } = require('../middlewares/validar-campos');
 
-const { getUsuarios, crearUsuario, actualizarUsuario, borrarUsuario} = require('../controllers/usuarios');
+const { getUsuarios, crearUsuario, actualizarUsuario, borrarUsuario, getFavoritos, addFavorito, removeFavorito } = require('../controllers/usuarios');
 const { validarJWT } = require('../middlewares/validar-jwt');
 
 const router = Router();
@@ -24,7 +24,7 @@ router.post('/',
 
     crearUsuario);
 
-router.put( '/:id',
+router.put('/:id',
 
     [
         validarJWT,
@@ -32,7 +32,7 @@ router.put( '/:id',
         check('email', 'El email es obligatorio').isEmail(),
         check('role', 'El rol es obligatorio').not().isEmpty(),
         validarCampos,
-        
+
 
     ],
     actualizarUsuario);
@@ -41,6 +41,12 @@ router.delete('/:id',
     validarJWT,
     borrarUsuario
 );
+
+router.get('/favoritos', validarJWT, getFavoritos);
+
+router.post('/favoritos/:inmuebleId', validarJWT, addFavorito);
+
+router.delete('/favoritos/:inmuebleId', validarJWT, removeFavorito);
 
 
 module.exports = router;

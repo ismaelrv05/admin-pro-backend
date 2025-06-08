@@ -6,36 +6,44 @@ const UsuarioSchema = Schema({
         type: String,
         required: true
     },
-    email:{
+    email: {
         type: String,
         required: true,
         unique: true,
     },
-    password:{
+    password: {
         type: String,
         required: true,
     },
-    img:{
+    img: {
         type: String,
     },
-    role:{
+    role: {
         type: String,
-        required: true,
+        enum: ['ADMIN_ROLE', 'USER_ROLE'],
         default: 'USER_ROLE',
+        required: true
     },
-    google:{
+    google: {
         type: Boolean,
         default: false,
     },
+    favoritos: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Inmueble'
+        }
+    ],
+
 });
 
-UsuarioSchema.method('toJSON', function(){
-    const {__V, _id, password, ...object } = this.toObject();
+UsuarioSchema.method('toJSON', function () {
+    const { __V, _id, password, ...object } = this.toObject();
 
     object.uid = _id;
-    return object; 
+    return object;
 })
 
 
 
-module.exports = model( 'Usuario', UsuarioSchema );
+module.exports = model('Usuario', UsuarioSchema);

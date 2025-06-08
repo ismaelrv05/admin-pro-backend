@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Qué necesito para alquilar un piso?",
+    "respuesta": "DNI, contrato de trabajo, últimas nóminas y a veces un aval bancario."
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Cómo solicito una hipoteca?",
+    "respuesta": "Debes acudir a una entidad financiera con tu DNI, justificantes de ingresos y contrato laboral."
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Cuánto debo ganar para acceder a una hipoteca?",
+    "respuesta": "La cuota mensual no debe superar el 30-35% de tu salario neto."
+  },
+  {
+    "id": 4,
+    "pregunta": "¿Qué diferencia hay entre hipoteca fija y variable?",
+    "respuesta": "La fija mantiene el mismo interés todo el plazo, la variable se actualiza según un índice como el Euríbor."
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Cuáles son los gastos de comprar una vivienda?",
+    "respuesta": "Notaría, registro, impuestos (ITP o IVA), gestoría, tasación y apertura de hipoteca."
+  },
+  {
+    "id": 6,
+    "pregunta": "¿Qué es el TIN y el TAE de una hipoteca?",
+    "respuesta": "El TIN es el tipo de interés nominal, el TAE incluye comisiones y refleja el coste real anual."
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Puedo comprar siendo autónomo?",
+    "respuesta": "Sí, pero necesitarás justificar ingresos estables con declaraciones fiscales y movimientos bancarios."
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Es mejor comprar o alquilar?",
+    "respuesta": "Depende de tu situación económica, laboral y si planeas vivir muchos años en el mismo lugar."
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Qué debo revisar al visitar un inmueble?",
+    "respuesta": "Estado de instalaciones, orientación, iluminación, ruidos, estado legal del inmueble y gastos de comunidad."
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Qué es el Euríbor?",
+    "respuesta": "Es un índice de referencia para hipotecas variables en Europa. Si sube, la cuota también puede subir."
+  },
+  {
+    "id": 11,
+    "pregunta": "¿Qué tipo de vivienda me conviene según mi salario?",
+    "respuesta": "Busca que la hipoteca no supere el 35% de tus ingresos mensuales netos."
+  },
+  {
+    "id": 12,
+    "pregunta": "¿Puedo usar ayudas estatales para comprar una casa?",
+    "respuesta": "Sí, algunas comunidades ofrecen ayudas para jóvenes, familias numerosas o primera vivienda."
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Qué es el IBI?",
+    "respuesta": "Es el Impuesto sobre Bienes Inmuebles, lo paga el propietario cada año al ayuntamiento."
+  },
+  {
+    "id": 14,
+    "pregunta": "¿Qué documentación necesito para comprar un inmueble?",
+    "respuesta": "DNI, contrato de arras, nota simple del registro, escrituras y justificante del pago."
+  },
+  {
+    "id": 15,
+    "pregunta": "¿Qué es una nota simple del registro de la propiedad?",
+    "respuesta": "Es un documento que indica quién es el propietario, si hay hipotecas o cargas sobre el inmueble."
+  },
+  {
+    "id": 16,
+    "pregunta": "¿Qué es una tasación inmobiliaria?",
+    "respuesta": "Es un informe realizado por un técnico que determina el valor real de un inmueble."
+  },
+  {
+    "id": 17,
+    "pregunta": "¿Quién paga los gastos de notaría?",
+    "respuesta": "En compras, suele pagarlos el comprador. En alquileres, normalmente el arrendador."
+  },
+  {
+    "id": 18,
+    "pregunta": "¿Qué es una fianza en alquiler?",
+    "respuesta": "Es un importe que el inquilino entrega como garantía. Se devuelve al finalizar si no hay daños."
+  },
+  {
+    "id": 19,
+    "pregunta": "¿Cuánto dura un contrato de alquiler?",
+    "respuesta": "Por ley, suele ser de 5 años si el propietario es persona física, 7 si es jurídica."
+  },
+  {
+    "id": 20,
+    "pregunta": "¿Puedo reformar una vivienda alquilada?",
+    "respuesta": "Solo con permiso del propietario, y sin modificar elementos estructurales salvo acuerdo."
+  },
+  {
+    "id": 21,
+    "pregunta": "¿Qué pasa si dejo de pagar el alquiler?",
+    "respuesta": "El propietario puede iniciar un proceso de desahucio tras un mes de impago."
+  },
+  {
+    "id": 22,
+    "pregunta": "¿Qué tipos de contratos existen para alquilar?",
+    "respuesta": "Vivienda habitual, uso temporal, turístico o por habitaciones."
+  },
+  {
+    "id": 23,
+    "pregunta": "¿Qué es una vivienda protegida?",
+    "respuesta": "Son viviendas con precio limitado y requisitos de acceso, normalmente para jóvenes o rentas bajas."
+  },
+  {
+    "id": 24,
+    "pregunta": "¿Puedo desgravar mi hipoteca?",
+    "respuesta": "Solo si la contrataste antes de 2013 y cumples los requisitos de Hacienda."
+  },
+  {
+    "id": 25,
+    "pregunta": "¿Cómo se calcula el valor catastral?",
+    "respuesta": "Lo calcula el catastro en base a la ubicación, superficie, uso, construcción y valor del suelo."
+  },
+  {
+    "id": 26,
+    "pregunta": "¿Qué son los gastos de comunidad?",
+    "respuesta": "Son los costes compartidos por todos los propietarios: limpieza, mantenimiento, ascensor, etc."
+  },
+  {
+    "id": 27,
+    "pregunta": "¿Es obligatorio contratar seguro del hogar?",
+    "respuesta": "Solo si tienes hipoteca, el banco puede exigirte uno de daños. No es obligatorio en alquiler."
+  },
+  {
+    "id": 28,
+    "pregunta": "¿Qué impuestos se pagan al vender un inmueble?",
+    "respuesta": "Plusvalía municipal y posible IRPF por ganancia patrimonial."
+  },
+  {
+    "id": 29,
+    "pregunta": "¿Qué es el certificado energético?",
+    "respuesta": "Es un documento obligatorio que indica la eficiencia energética de una vivienda (A a G)."
+  },
+  {
+    "id": 30,
+    "pregunta": "¿Puedo alquilar sin contrato escrito?",
+    "respuesta": "Sí, pero es altamente desaconsejado. Sin contrato no tienes protección legal clara."
+  }
+]

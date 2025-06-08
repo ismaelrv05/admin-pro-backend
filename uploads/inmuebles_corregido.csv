@@ -1,0 +1,9 @@
+nombre,precio,ubicacion,tipo,descripcion,metrosCuadrados,habitaciones,banos,garage,amueblado,fechaPublicacion,img,disponibilidad,obraNueva
+Piso céntrico,120000,Madrid,pisos,Moderno y luminoso,85,3,2,True,True,2023-11-01,,compra,True
+Apartamento económico,70000,Valencia,pisos,Económico y funcional,60,2,1,False,False,2023-08-12,,alquiler,False
+Local comercial amplio,200000,Barcelona,locales,Ideal para negocio,150,0,1,False,False,2024-01-05,,compra,True
+Terreno urbanizable,50000,Sevilla,suelos,Perfecto para construir,300,0,0,False,False,2022-05-20,,compra,False
+Ático con vistas,250000,Bilbao,pisos,Ático reformado,110,3,2,True,True,2023-07-14,,compra,True
+Oficina equipada,180000,Málaga,locales,Lista para entrar,90,0,1,False,True,2024-02-01,,alquiler,False
+Casa en la sierra,95000,Granada,pisos,Entorno natural,95,4,2,True,False,2023-04-30,,compra,False
+Nave industrial,300000,Zaragoza,locales,Acceso para camiones,400,0,1,True,False,2022-10-10,,compra,True

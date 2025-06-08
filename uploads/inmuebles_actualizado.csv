@@ -1,0 +1,4 @@
+nombre,descripcion,precio,ubicacion,tipo,disponibilidad,obraNueva,metrosCuadrados,habitaciones,banos,garage,amueblado,fechaPublicacion,img,usuario
+Casa de campo,Hermosa casa de campo con jardín amplio.,250000,"Granada, España",Casa,compra,False,180,4,2,True,True,2025-05-06T16:01:17.928044,https://example.com/img1.jpg,6640f7a78e6fdd49e4906b22
+Departamento moderno,Departamento céntrico ideal para parejas.,900,"Madrid, España",Departamento,alquiler,True,75,2,1,False,True,2025-05-06T16:01:17.928057,https://example.com/img2.jpg,6640f7a78e6fdd49e4906b22
+Terreno amplio,Terreno rústico con posibilidad de construcción.,120000,"Toledo, España",Terreno,compra,False,500,0,0,False,False,2025-05-06T16:01:17.928062,https://example.com/img3.jpg,6640f7a78e6fdd49e4906b22
