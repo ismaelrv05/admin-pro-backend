@@ -1,0 +1,35 @@
+<!-- Botón flotante -->
+<div class="chatbot-fab-wrapper" *ngIf="!visible">
+  <div class="neon-ring"></div>
+  <button class="chatbot-fab" (click)="toggle()">
+    <img src="assets\icons\chatbot-icon.jpg" alt="Asistente" />
+  </button>
+</div>
+
+<!-- Ventana flotante -->
+<div class="chatbot-widget" *ngIf="visible">
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <h2 class="titulo-chat">Asesor Inmobiliario</h2>
+      <div class="acciones">
+        <button (click)="limpiarConversacion()" class="limpiar-btn">🗑 Limpiar</button>
+        <button (click)="toggle()" class="cerrar-btn">✖</button>
+      </div>
+    </div>
+
+    <div class="chat-window" #chatWindow>
+      <div *ngFor="let mensaje of mensajes" class="chat-bubble" [class.user]="mensaje.esUsuario"
+        [innerHTML]="formatearMensaje(mensaje.texto)">
+      </div>
+
+      <div *ngIf="loading" class="chat-bubble escribiendo">
+        <i>Buscando respuesta...</i>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input [(ngModel)]="pregunta" (keyup.enter)="enviar()" placeholder="Haz una pregunta..." />
+      <button (click)="enviar()" class="enviar-btn">Enviar</button>
+    </div>
+  </div>
+</div>

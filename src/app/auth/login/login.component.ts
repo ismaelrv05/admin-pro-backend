@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
     });
     google.accounts.id.renderButton(
       this.googleBtn.nativeElement,
+
       { theme: "outline", size: "large" }
     );
   }
@@ -58,10 +59,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   login() {
-
     this.userService.login(this.loginForm.value)
       .subscribe(resp => {
-        this.router.navigateByUrl('/home')
+        this.router.navigate(['/home']);
+
       }, (err) => {
         console.log(err);
         Swal.fire('Error', err.error.msg, 'error');

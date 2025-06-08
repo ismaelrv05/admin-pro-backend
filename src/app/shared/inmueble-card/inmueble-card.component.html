@@ -1,0 +1,33 @@
+<div class="card inmueble-card shadow-sm">
+  <img [src]="imagenUrl" class="card-img-top" alt="Imagen del inmueble" />
+
+  <button class="btn-fav" (click)="inmbFavorito()">
+    <i class="bi" [ngClass]="esFavorito ? 'bi-heart-fill text-danger' : 'bi-heart'"></i>
+  </button>
+
+  <div class="card-body">
+    <h5 class="card-title text-primary">{{ inmueble.tipo }} en {{ inmueble.nombre }}</h5>
+
+    <p class="card-text text-muted mb-1">
+      <i class="bi bi-geo-alt-fill me-1"></i>{{ inmueble.ubicacion }}
+    </p>
+
+    <p class="card-text fw-bold text-dark">
+      {{ inmueble.precio | currency:'EUR':'symbol':'1.0-0' }}
+    </p>
+
+    <p *ngIf="inmueble.obraNueva">Obra nueva</p>
+    <p>Disponible para: {{ inmueble.disponibilidad === 'compra' ? 'Compra' : 'Alquiler' }}</p>
+
+
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <a [routerLink]="['/home', 'inmueble', inmueble._id]" class="btn btn-outline-primary btn-sm"  (click)="emitirSeleccion()">
+        Ver detalles
+      </a>
+
+      <small class="text-muted">
+        Publicado {{ inmueble.fechaPublicacion | date:'longDate' }}
+      </small>
+    </div>
+  </div>
+</div>

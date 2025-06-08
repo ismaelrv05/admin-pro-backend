@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './pages.component.html',
 })
 export class PagesComponent {
+  ngOnInit(): void {
+    console.log('PagesComponent cargado');
+  }
 
 }

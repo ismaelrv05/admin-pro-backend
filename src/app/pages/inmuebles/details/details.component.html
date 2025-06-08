@@ -1,0 +1,87 @@
+<div class="details-container" *ngIf="inmueble">
+
+  <header class="details-header">
+    <h1 class="details-title">{{ inmueble.tipo }} en {{ inmueble.nombre }}</h1>
+    <span class="details-ref">REF: {{ inmueble._id | slice:0:8 }}</span>
+    <p class="details-address">
+      {{ inmueble.ubicacion }}
+    </p>
+  </header>
+
+  <section class="details-gallery">
+    <img [src]="inmueble.img || '/assets/images/no-image-inmueble.png'" alt="Imagen inmueble" />
+    <span class="details-flag" *ngIf="inmueble.obraNueva">Obra Nueva</span>
+  </section>
+
+  <aside class="details-aside">
+    <div class="price-block">
+      <div class="price">
+        {{ inmueble.precio | number:'1.0-0' }}€
+      </div>
+      <div class="price-m2">
+        <ng-container *ngIf="inmueble?.metrosCuadrados as mts">
+          <small>
+            {{ (inmueble.precio / mts) | number:'1.0-0' }} €/m²
+          </small>
+        </ng-container>
+
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric-item" *ngIf="inmueble.metrosCuadrados">
+        <i class="bi bi-arrows-fullscreen"></i>
+        <span>{{ inmueble.metrosCuadrados }} m²</span>
+      </div>
+      <div class="metric-item" *ngIf="inmueble.habitaciones">
+        <i class="bi bi-door-open"></i>
+        <span>{{ inmueble.habitaciones }} Hab.</span>
+      </div>
+      <div class="metric-item" *ngIf="inmueble.banos">
+        <i class="bi bi-droplet-half"></i>
+        <span>{{ inmueble.banos }} Baños</span>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-block mt-3" (click)="volver()">
+      Volver
+    </button>
+  </aside>
+
+  <section class="details-description">
+    <h2>Descripción</h2>
+    <p>{{ inmueble.descripcion }}</p>
+  </section>
+
+  <section class="details-specs">
+    <h2>Características Generales</h2>
+    <div class="specs-grid">
+      <div class="spec-item">
+        <strong>Tipo:</strong> {{ inmueble.tipo }}
+      </div>
+      <div class="spec-item">
+        <strong>Disponibilidad:</strong>
+        {{ inmueble.disponibilidad === 'compra' ? 'Compra' : 'Alquiler' }}
+      </div>
+      <div class="spec-item" *ngIf="inmueble.garage !== undefined">
+        <strong>Garage:</strong> {{ inmueble.garage ? 'Sí' : 'No' }}
+      </div>
+      <div class="spec-item" *ngIf="inmueble.amueblado !== undefined">
+        <strong>Amueblado:</strong> {{ inmueble.amueblado ? 'Sí' : 'No' }}
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-chatbot [contextoInmueble]="inmueble ? { nombre: inmueble.nombre, precio: inmueble.precio } : null"></app-chatbot>
+
+<div *ngIf="inmueble">
+  <div id="mapa" class="mapa-container" *ngIf="inmueble?.coordenadas?.coordinates?.length === 2">
+    <!-- <app-mapa [markers]="[
+      {
+        lat: inmueble.coordenadas!.coordinates[1],
+        lng: inmueble.coordenadas!.coordinates[0],
+        popupText: inmueble.nombre
+      }
+    ]" [zoom]="15">
+    </app-mapa> -->
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="oportunidades-container">
+  <h3 class="titulo">Últimas oportunidades</h3>
+
+  <div class="row">
+    <div class="col-md-3" *ngFor="let inmueble of paginatedInmuebles">
+      <app-inmueble-card [inmueble]="inmueble"></app-inmueble-card>
+    </div>
+  </div>
+
+  <div class="navegacion mt-2 d-flex justify-content-center gap-2">
+    <button class="btn btn-outline-primary" (click)="prevPage()" [disabled]="currentPage === 0">
+      ‹
+    </button>
+    <button class="btn btn-outline-primary" (click)="nextPage()" [disabled]="(currentPage + 1) * pageSize >= inmuebles.length">
+      ›
+    </button>
+  </div>
+</div>

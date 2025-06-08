@@ -1,0 +1,33 @@
+<div class="user-list">
+  <h2>Gestión de Usuarios</h2>
+
+  <button (click)="crearUsuario()" class="btn btn-primary">+ Nuevo Usuario</button>
+
+  <h3>Total de usuarios: ( {{ totalUsuarios}} )</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Rol</th>
+        <th>Google</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.role }}</td>
+        <td>{{ usuario.google ? 'Sí' : 'No' }}</td>
+        <td>
+          <button (click)="editarUsuario(usuario.uid)">Editar</button>
+          <button (click)="eliminarUsuario(usuario.uid)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="cargarPagina(-5)" class="btn btn-secondary">Atrás</button>
+  &nbsp;
+  <button (click)="cargarPagina(5)" class="btn btn-secondary">Siguiente</button>
+</div>

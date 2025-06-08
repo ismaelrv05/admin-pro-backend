@@ -1,1 +1,29 @@
-<p>home-page works!</p>
+<app-portada></app-portada>
+<!-- Componente del buscador -->
+<app-buscador-inmuebles [filtro]="filtros" (buscar)="aplicarFiltros($event)">></app-buscador-inmuebles>
+
+<app-ultimas-oportunidades></app-ultimas-oportunidades>
+
+<h3>Ubicación de los inmuebles</h3>
+<div id="mapa" class="mapa-container">
+  <!-- <app-mapa [markers]="markers" [zoom]="12"></app-mapa> -->
+</div>
+
+<app-chatbot [contextoInmueble]="inmuebleSeleccionado"></app-chatbot>
+
+<!-- Contenedor de resultados -->
+<div class="container mt-4">
+  <div *ngIf="cargando" class="text-center">
+    <p>Cargando inmuebles...</p>
+  </div>
+
+  <div class="row" *ngIf="!cargando && inmuebles.length > 0 && filtrosAplicados">
+    <div class="col-md-4 mb-4" *ngFor="let inmueble of inmuebles">
+      <app-inmueble-card [inmueble]="inmueble" (verDetalle)="infoInmueble($event)"></app-inmueble-card>
+    </div>
+  </div>
+
+  <div *ngIf="!cargando && inmuebles.length === 0 && filtrosAplicados" class="text-center mt-4">
+    <p>No se encontraron inmuebles con los filtros seleccionados.</p>
+  </div>
+</div>

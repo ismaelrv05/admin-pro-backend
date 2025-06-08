@@ -1,0 +1,14 @@
+<section class="favoritos-container">
+  <h2 class="favoritos-title">
+    <i class="bi bi-heart-fill text-danger me-2"></i> Mis Favoritos
+  </h2>
+
+  <div *ngIf="favoritos.length === 0" class="text-center mt-5">
+    <p class="text-muted">No tienes inmuebles favoritos.</p>
+  </div>
+
+  <div class="favoritos-lista" *ngIf="favoritos.length > 0">
+    <app-inmueble-card *ngFor="let inmueble of favoritos" [inmueble]="inmueble">
+    </app-inmueble-card>
+  </div>
+</section>

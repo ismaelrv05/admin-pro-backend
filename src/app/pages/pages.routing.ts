@@ -4,18 +4,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { DetailsComponent } from './inmuebles/details/details.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: PagesComponent,
-    canActivate: [ AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: HomePageComponent },
-
+      { path: 'inmueble/:id', component: DetailsComponent },
+      { path: 'favoritos', component: FavoritosComponent },
     ]
-
   },
+
+
+
 ];
 
 @NgModule({

@@ -1,0 +1,54 @@
+<section class="buscador-container">
+  <div class="buscador-box shadow rounded">
+
+    <h3>Encuentra aquello que buscas</h3>
+    <p>Tenemos una amplia oferta de pisos y casas con excelentes descuentos</p>
+
+    <form class="formulario-buscador d-flex flex-wrap align-items-center gap-2" (ngSubmit)="onBuscar()">
+
+      <!-- Operación: compra o alquiler -->
+      <select [(ngModel)]="filtro.operacion" name="operacion">
+        <option value="" disabled selected>Compra o alquiler</option>
+        <option *ngFor="let op of operaciones" [value]="op">
+          {{ op | titlecase }}
+        </option>
+      </select>
+
+      <!-- Tipo de inmueble -->
+      <select [(ngModel)]="filtro.tipo" name="tipo">
+        <option value="" disabled selected>Selecciona el tipo de inmueble</option>
+        <option *ngFor="let tipo of tipos" [value]="tipo">
+          {{ tipo }}
+        </option>
+      </select>
+
+      <!-- Texto de búsqueda -->
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar por dirección, provincia, c.p."
+        [(ngModel)]="filtro.texto"
+        name="texto"
+      />
+
+      <!-- Botón de búsqueda -->
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-search"></i>
+      </button>
+
+    </form>
+
+    <!-- Checkboxes adicionales -->
+    <div class="opciones mt-2 d-flex gap-3">
+      <label>
+        <input type="checkbox" [(ngModel)]="filtro.obraNueva" name="obraNueva" />
+        Obra Nueva
+      </label>
+      <label>
+        <input type="checkbox" [(ngModel)]="filtro.referencia" name="referencia" />
+        Buscar por referencia
+      </label>
+    </div>
+
+  </div>
+</section>

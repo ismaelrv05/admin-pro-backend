@@ -1,0 +1,38 @@
+<h2>{{ isEditMode ? 'Editar Usuario' : 'Nuevo Usuario' }}</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label>
+    Nombre:
+    <input formControlName="nombre" />
+  </label>
+  <br />
+
+  <label>
+    Email:
+    <input formControlName="email" />
+  </label>
+  <br />
+
+  <label>
+    Contraseña:
+    <input type="password" formControlName="password" />
+    <small *ngIf="isEditMode">(Dejar en blanco para no cambiarla)</small>
+  </label>
+  <br />
+
+  <label>
+    Rol:
+    <select formControlName="role">
+      <option value="ADMIN_ROLE">Administrador</option>
+      <option value="CLIENT_ROLE">Cliente</option>
+    </select>
+  </label>
+  <br />
+
+  <button type="submit" [disabled]="userForm.invalid">
+    {{ isEditMode ? 'Actualizar' : 'Crear' }}
+  </button>
+
+  <button type="button" (click)="cancelar()">Cancelar</button>
+
+</form>

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fw-bold" href="#">Inmobiliaria</a>
+
+    <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+
+      <li class="nav-item me-3">
+        <a class="nav-link favoritos-link" routerLink="/home/favoritos" routerLinkActive="active">
+          <i class="text-danger me-1"></i> Mis Favoritos
+        </a>
+
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle d-flex align-items-center user-toggle" href="#" id="userDropdown"
+          role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img [src]="imgUrl" alt="Foto de {{ userName }}" class="user-avatar" />
+          <div class="d-flex flex-column ms-2">
+            <span class="user-name">{{ userName }}</span>
+            <small>{{ userRole === 'ADMIN_ROLE' ? 'Administrador' : 'Cliente' }}</small>
+          </div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end animated-dropdown" aria-labelledby="userDropdown">
+          <li *ngIf="userRole === 'ADMIN_ROLE'">
+            <button class="dropdown-item" (click)="gestionarUsuarios()">Gestionar usuarios</button>
+          </li>
+          <li>
+            <button class="dropdown-item" (click)="logout()">Cerrar sesión</button>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
