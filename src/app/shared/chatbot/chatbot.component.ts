@@ -48,6 +48,13 @@ export class ChatbotComponent implements OnInit {
         this.loading = false;
         this.guardarHistorial();
         this.scrollAlFinal();
+
+        const renderStart = performance.now();
+        setTimeout(() => {
+          const renderEnd = performance.now();
+          console.log(`🎨 Tiempo de renderizado en frontend: ${Math.round(renderEnd - renderStart)} ms`);
+        }, 0);
+
       },
       error: () => {
         this.mensajes.push({ texto: 'Error al obtener respuesta.', esUsuario: false });
@@ -61,16 +68,16 @@ export class ChatbotComponent implements OnInit {
     this.scrollAlFinal();
   }
 
-scrollAlFinal(): void {
-  setTimeout(() => {
-    if (this.chatWindow) {
-      this.chatWindow.nativeElement.scrollTo({
-        top: this.chatWindow.nativeElement.scrollHeight,
-        behavior: 'smooth'
-      });
-    }
-  }, 0);
-}
+  scrollAlFinal(): void {
+    setTimeout(() => {
+      if (this.chatWindow) {
+        this.chatWindow.nativeElement.scrollTo({
+          top: this.chatWindow.nativeElement.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
+    }, 0);
+  }
 
 
   limpiarConversacion() {
