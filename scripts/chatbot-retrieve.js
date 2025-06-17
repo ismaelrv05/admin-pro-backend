@@ -14,7 +14,7 @@ async function generateEmbedding(text) {
         model: "models/embedding-001",
         content: {
             parts: [{ text }]
-        }
+        } 
     };
 
     const res = await fetch(url, {
