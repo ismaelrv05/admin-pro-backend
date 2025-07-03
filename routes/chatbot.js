@@ -3,7 +3,11 @@ const router = express.Router();
 const path = require('path');
 const fs = require('fs');
 
+const { execSync } = require('child_process');
+
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const MODEL_PROVIDER = process.env.MODEL_PROVIDER || 'gemini';
+
 
 const faqPath = path.join(__dirname, '../embeddings/faq-embeddings.json');
 const inmueblesPath = path.join(__dirname, '../embeddings/inmuebles-embeddings.json');
@@ -172,7 +176,16 @@ Pregunta del usuario: ${pregunta}
 Respuesta:
 `;
 
-    const respuesta = await callGemini(prompt);
+    const modelo = req.body.modelo || MODEL_PROVIDER;
+
+    const start = Date.now();
+    const respuesta = await (
+      modelo === 'llama'
+        ? callLlamaLocal(prompt)
+        : callGemini(prompt)
+    );
+
+    const duration = Date.now() - start;
 
     return res.json({ respuesta });
   } catch (error) {
@@ -230,4 +243,19 @@ async function callGemini(prompt) {
 
   const data = await res.json();
   return data?.candidates?.[0]?.content?.parts?.[0]?.text || 'No se pudo generar respuesta.';
+}
+
+async function callLlamaLocal(prompt) {
+  try {
+    const sanitized = prompt.replace(/"/g, '\\"').replace(/\n/g, ' ');
+    const command = `ollama run llama3 "${sanitized}"`;
+    const output = execSync(command, {
+      encoding: 'utf-8',
+      maxBuffer: 1024 * 1024 * 10
+    });
+    return output.trim();
+  } catch (error) {
+    console.error('Error al usar LLaMA con Ollama:', error.message);
+    return 'Error al generar respuesta con el modelo local LLaMA.';
+  }
 }
